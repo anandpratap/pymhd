@@ -1,4 +1,4 @@
 pymhd
 =====
 
-MagenetoHydroDynamics code for my masters project
+MagnetoHydroDynamics code for my masters project
