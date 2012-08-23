@@ -33,7 +33,7 @@ class vector:
     """
     
     def __init__(self):
-        self.x = zeros(8)
+        self.X = zeros(8)
 
 
 class line:
@@ -128,10 +128,10 @@ def norm(a):
     """
     Return norm of a vector
     """
-    n = len(a.x)
+    n = len(a.X)
     nom = 0.0
     for i in range(n):
-        nom += a.x[i]*a.x[i]
+        nom += a.X[i]*a.X[i]
     return sqrt(nom)
 
 def sgn(x):
@@ -147,7 +147,7 @@ def vectormul(a, b):
     """
     tmp_sum = 0.0
     for i in range(8):
-        tmp_sum += a.x[i]*b.x[i]
+        tmp_sum += a.X[i]*b.X[i]
     return tmp_sum
 
 def matrixmul_mv(A,b):
@@ -158,9 +158,9 @@ def matrixmul_mv(A,b):
     """
     c = vector()
     for i in range(8):
-        c.x[i] = 0.0
+        c.X[i] = 0.0
         for j in range(8):
-            c.x[i] += A.Y[i][j]*b.x[j]
+            c.X[i] += A.Y[i][j]*b.X[j]
     return c
 
 def matrixmul_vm(a, B):
@@ -171,9 +171,9 @@ def matrixmul_vm(a, B):
     """
     c = vector()
     for i in range(8):
-        c.x[i] = 0.0
+        c.X[i] = 0.0
         for j in range(8):
-            c.x[i] += a.x[j]*B.Y[j][i]
+            c.X[i] += a.X[j]*B.Y[j][i]
     return c
 
 def matrixmul_mm(A, B):
